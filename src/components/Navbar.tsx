@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link to="/collections" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Collections</Link>
             <a href="#festivals" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Festivals</a>
             <a href="#about" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">About Us</a>
-            <a href="#contact" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Contact</a>
+            <Link to="/contact" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Contact</Link>
           </nav>
           
           {/* Icons */}
