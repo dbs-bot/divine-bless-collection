@@ -2,6 +2,7 @@
 import React from 'react';
 import { ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 interface ProductCardProps {
   image: string;
@@ -9,6 +10,7 @@ interface ProductCardProps {
   description: string;
   price: string;
   discountPrice?: string;
+  id?: string;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ 
@@ -16,7 +18,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   name, 
   description, 
   price, 
-  discountPrice 
+  discountPrice,
+  id = "1" // Default ID if not provided
 }) => {
   return (
     <div className="divine-card overflow-hidden rounded-lg">
@@ -43,12 +46,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
               <span className="font-bold">{price}</span>
             )}
           </div>
-          <Button 
-            size="sm" 
-            className="bg-divine-gold hover:bg-divine-gold/90 text-white"
-          >
-            <ShoppingCart size={16} className="mr-1" /> Add
-          </Button>
+          <Link to={`/product/${id}`}>
+            <Button 
+              size="sm" 
+              className="bg-divine-gold hover:bg-divine-gold/90 text-white"
+            >
+              <ShoppingCart size={16} className="mr-1" /> Add
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
