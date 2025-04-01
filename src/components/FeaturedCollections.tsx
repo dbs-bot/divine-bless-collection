@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ProductCard from './ProductCard';
+import { Link } from 'react-router-dom';
 
 const FeaturedCollections = () => {
   const products = [
@@ -62,9 +63,9 @@ const FeaturedCollections = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <a href="#" className="divine-button-outline">
+          <Link to="/collections" className="divine-button-outline">
             View All Collections
-          </a>
+          </Link>
         </div>
       </div>
     </section>

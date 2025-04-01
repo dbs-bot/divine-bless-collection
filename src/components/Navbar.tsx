@@ -2,6 +2,7 @@
 import React from 'react';
 import { Menu, Search, ShoppingCart, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -10,16 +11,16 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-divine-maroon text-2xl font-display font-bold">Divine</span>
               <span className="text-divine-gold text-2xl font-display font-bold">Bless</span>
-            </a>
+            </Link>
           </div>
           
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Home</a>
-            <a href="#collections" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Collections</a>
+            <Link to="/" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Home</Link>
+            <Link to="/collections" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Collections</Link>
             <a href="#festivals" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Festivals</a>
             <a href="#about" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">About Us</a>
             <a href="#contact" className="text-gray-700 hover:text-divine-gold transition-colors duration-300">Contact</a>
