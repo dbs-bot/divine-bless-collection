@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				divine: {
+					gold: '#D4AF37',
+					red: '#B91C1C',
+					maroon: '#800020',
+					orange: '#EA580C',
+					cream: '#FFFDD0',
+					blue: '#1E40AF',
+					purple: '#7E22CE',
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,28 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'shimmer': {
+					from: {
+						backgroundPosition: '0 0'
+					},
+					to: {
+						backgroundPosition: '-200% 0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'shimmer': 'shimmer 2s linear infinite'
+			},
+			fontFamily: {
+				'serif': ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+				'display': ['Palatino', 'Georgia', 'serif']
+			},
+			backgroundImage: {
+				'temple-pattern': "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMEMxNS41MjI5IDAgMjAgNC40NzcxNCAyMCAxMEMyMCAxNS41MjI5IDE1LjUyMjkgMjAgMTAgMjBDNC40NzcxNCAyMCAwIDE1LjUyMjkgMCAxMEMwIDQuNDc3MTQgNC40NzcxNCAwIDEwIDBaTTEwIDJDNS41ODE3MiAyIDIgNS41ODE3MiAyIDEwQzIgMTQuNDE4MyA1LjU4MTcyIDE4IDEwIDE4QzE0LjQxODMgMTggMTggMTQuNDE4MyAxOCAxMEMxOCA1LjU4MTcyIDE0LjQxODMgMiAxMCAyWiIgZmlsbD0iI0Q0QUYzNyIgb3BhY2l0eT0iMC4wNSI+PC9wYXRoPjwvc3ZnPg==')",
+				'festival-light': "linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('/images/festival-light.jpg')"
 			}
 		}
 	},
